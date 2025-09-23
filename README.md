@@ -25,3 +25,14 @@ The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files
 ```
 TORCH_DISTRIBUTED_DEBUG=INFO OMP_NUM_THREADS=8 CUDA_VISIBLE_DEVICES=0  torchrun --rdzv_backend=static --rdzv_endpoint=localhost:0 --standalone --nproc_per_node=1 train.py
 ```
+
+# Inference
+Sample molecules for all pockets in the test set
+```
+python sample_batch.py --ckpt <checkpoint> --num_atom <number of samples> --batch_size <batch_size> --cuda <cuda> 
+```
+
+Sample molecules for given customized pockets
+```
+python sample_for_pocket.py --pdb_path <pdb path>  --num_atom <number of samples> --batch_size <batch_size>   --ckpt <checkpoint>
+```
