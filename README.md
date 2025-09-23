@@ -36,3 +36,8 @@ Sample molecules for given customized pockets
 ```
 python sample_for_pocket.py --pdb_path <pdb path>  --num_atom <number of samples> --batch_size <batch_size>   --ckpt <checkpoint>
 ```
+
+# Evaluation
+```
+python -u evaluate.py --path <generate_molecule_path>
+```
