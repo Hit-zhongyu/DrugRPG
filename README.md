@@ -13,11 +13,11 @@ conda activate DrugRPG
 ```
 
 Pre-trained models
-The pre-trained models could be downloaded from Zenodo.
+The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17107488).
 
 # Benchmarks
 
-Download and extract the dataset is provided in Zenodo
+Download and extract the dataset is provided in [Zenodo](https://zenodo.org/records/17107488)
 
 The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files/crossdock2020/
 
