@@ -1,5 +1,5 @@
 # DrugRPG：Integrating Chemical Priors and Physical Laws with Diffusion Models for Structure-Based Drug Design
-Official implementation of DrugRPG, a structure-based drug design with representationo alignment and physics guidance, by Zhongyu Liu.
+Official implementation of DrugRPG, a structure-based drug design with representationo alignment and physics guidance, by Zhongyu Liu.<br>
 ![image](https://github.com/Hit-zhongyu/DrugRPG/blob/main/image/DrugRPG.png)
 # Dependencies
 ### **Conda environment**
