@@ -1,0 +1,81 @@
+model:
+  # for ligand
+  ligand_atom_dim: 8
+  ligand_hidden_dim: 128
+  edge_input_dim: 5 
+  edge_hidden_dim: 64
+  dist_dim: 32
+  n_layers: 6
+  n_heads: 16
+  ligand_std: 2.4979837    # [2.4811397 2.4533982 2.5401344]
+  # ligand_std: 2.997087  #this is for ligand-protein mean
+  # for protein
+  protein_atom_dim: 31
+  potein_hidden_dim: 128
+  protein_out_dim: 128
+  p_n_layers: 6
+
+  #others
+  timesteps: 1000
+  pred_data: True
+  noise_align: True
+  schedule: 'slowed_cosine'
+  pos_schedule: 'slowed_cosine'
+  bond_schedule: 'slowed_cosine'
+  ouroboros_path: '/mnt/rna01/lzy/pocketdiff5/configs/Ouroboros'
+  diff_pos:
+      beta_schedule: sigmoid
+      scale_start: 1.e-7
+      scale_end: 2.e-3
+      width: 3
+  diff_atom: 
+      beta_schedule: cosine
+      scale_start: 0.9999
+      scale_end: 0.0001
+      width: 3
+
+  diff_bond:
+      init_prob: absorb
+      beta_schedule: segment
+      time_segment: [600, 400]
+      segment_diff: 
+        - scale_start: 0.9999
+          scale_end: 0.001
+          width: 3
+        - scale_start: 0.001
+          scale_end: 0.0001
+          width: 2
+
+train:
+  seed: 2024
+  batch_size: 1
+  max_grad_norm: 10.0
+  num_workers: 8
+  train_epoch: 288
+  per_save: 1
+  
+optimizer:
+  type: AdamW
+  lr: 5.e-4
+  weight_decay: 0.
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.e-8
+  warmup: 25000
+  grad_clip: 10.
+  disable_grad_log: True
+
+scheduler:
+  type: plateau
+  factor: 0.8
+  patience: 15
+  min_lr: 1.e-5
+
+dataset:
+  name: pl
+  split: True
+  data_path: /mnt/rna01/lzy/SBDD/data/crossdocked_pocket10
+  split_data_path: /mnt/rna01/lzy/SBDD/data/split_by_name.pt
+
+logs:
+  logdir: ./logs/weight0_1_mpl_model
