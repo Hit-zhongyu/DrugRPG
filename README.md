@@ -2,7 +2,7 @@
 Official implementation of DrugRPG, a structure-based drug design with representationo alignment and physics guidance, by Zhongyu Liu.
 
 # Dependencies
-**Conda environment**
+### **Conda environment**
 
 Please use our environment file to install the environment.
 ```
@@ -10,9 +10,9 @@ Please use our environment file to install the environment.
 conda env create -f DrugRPG.yml
 # Activate the environment
 conda activate DrugRPG
-```
-
-Pre-trained models
+``` 
+  
+### **Pre-trained models**
 The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17107488).
 
 # Benchmarks
