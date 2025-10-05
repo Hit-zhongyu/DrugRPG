@@ -8,11 +8,7 @@
 
 Please use our environment file to install the environment.
 ```
-# Clone the environment
-conda env create -f DrugRPG.yml
-# Activate the environment
-conda activate DrugRPG
-conda create -n DrugRPG python=3.10
+conda create -n DrugRPG python=3.9
 conda activate DrugRPG
 conda install pytorch pytorch-cuda=11.6 -c pytorch -c nvidia
 conda install pyg -c pyg
