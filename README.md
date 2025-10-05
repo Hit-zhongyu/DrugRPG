@@ -12,6 +12,15 @@ Please use our environment file to install the environment.
 conda env create -f DrugRPG.yml
 # Activate the environment
 conda activate DrugRPG
+conda create -n DrugRPG python=3.10
+conda activate DrugRPG
+conda install pytorch pytorch-cuda=11.6 -c pytorch -c nvidia
+conda install pyg -c pyg
+conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-forge
+
+# For Vina Docking
+pip install meeko==0.1.dev3 scipy pdb2pqr vina==1.2.2 
+python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py3
 ``` 
   
 ### **Pre-trained models**
