@@ -22,6 +22,10 @@ conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-f
 pip install torch_scatter torch_sparse torch_cluster --no-index -f https://data.pyg.org/whl/torch-2.4.0+cu124.html
 pip install torch_geometric
 
+# DGL
+pip install dgl -f https://data.dgl.ai/wheels/torch-2.2/cu121/repo.html
+pip install dgllife
+
 # For Vina Docking
 pip install meeko==0.1.dev3 scipy pdb2pqr vina==1.2.2 
 python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py3
