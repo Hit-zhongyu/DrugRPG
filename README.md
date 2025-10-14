@@ -10,7 +10,7 @@ Please use our environment file to install the environment.
 ```
 conda create -n DrugRPG python=3.9
 conda activate DrugRPG
-conda install pytorch pytorch-cuda=11.6 -c pytorch -c nvidia
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 conda install pyg -c pyg
 conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-forge
 
