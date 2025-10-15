@@ -48,7 +48,7 @@ model:
 
 train:
   seed: 2024
-  batch_size: 1
+  batch_size: 64
   max_grad_norm: 10.0
   num_workers: 8
   train_epoch: 288
