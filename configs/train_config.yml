@@ -22,7 +22,7 @@ model:
   schedule: 'slowed_cosine'
   pos_schedule: 'slowed_cosine'
   bond_schedule: 'slowed_cosine'
-  ouroboros_path: '/mnt/rna01/lzy/pocketdiff5/configs/Ouroboros'
+  ouroboros_path: './configs/Ouroboros'
   diff_pos:
       beta_schedule: sigmoid
       scale_start: 1.e-7
@@ -74,8 +74,8 @@ scheduler:
 dataset:
   name: pl
   split: True
-  data_path: /mnt/rna01/lzy/SBDD/data/crossdocked_pocket10
-  split_data_path: /mnt/rna01/lzy/SBDD/data/split_by_name.pt
+  data_path: ./data/crossdocked_pocket10
+  split_data_path: ./data/split_by_name.pt
 
 logs:
-  logdir: ./logs/weight0_1_mpl_model
+  logdir: ./logs/training_model
