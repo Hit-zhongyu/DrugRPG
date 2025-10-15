@@ -32,13 +32,22 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 ``` 
   
 ### **Pre-trained models**
-The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17183753).
+The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17355903).
 
 # Benchmarks
 
-Download and extract the dataset is provided in [Zenodo](https://zenodo.org/records/17183753)
+Download and extract the dataset is provided in [Zenodo](https://zenodo.org/records/17355903)
 
 The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files/crossdock2020/
+
+### **Data preparation**
+```
+mkidr data
+cd data
+wget -c https://zenodo.org/records/17355903/files/crossdocked_pocket10.tar.gz?download=1
+wget -c https://zenodo.org/records/17355903/files/split_by_name.pt?download=1
+tar -xzvf crossdocked_pocket10.tar.gz
+```
 
 # Training 
 ```
