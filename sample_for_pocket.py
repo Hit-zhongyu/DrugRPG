@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='ddim',help='using ddim or ddpm model for sampling')
-    parser.add_argument('--pdb_path', type=str, default='/mnt/rna01/lzy/SBDD_final2/data/IL11_ligand_pocket10.pdb')
+    parser.add_argument('--pdb_path', type=str, default='./data/IL11_ligand_pocket10.pdb')
     parser.add_argument('--sdf_path', type=str, default=None, help='path to the sdf file of reference ligand')
     parser.add_argument('--num_atom', type=int, default=30)
     parser.add_argument('--seed', type=int, default=2024)
