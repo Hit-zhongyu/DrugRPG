@@ -45,7 +45,8 @@ The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files
 mkidr data
 cd data
 wget -c https://zenodo.org/records/17355903/files/crossdocked_pocket10.tar.gz?download=1
-wget -c https://zenodo.org/records/17355903/files/crossdocked_pocket10.tar.gz?download=1
+wget -c https://zenodo.org/records/17355903/files/split_by_name.pt?download=1
+tar -xzvf crossdocked_pocket10.tar.gz
 ```
 
 # Training 
