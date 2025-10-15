@@ -1,23 +1,42 @@
 # DrugRPG：Integrating Chemical Priors and Physical Laws with Diffusion Models for Structure-Based Drug Design
-Official implementation of DrugRPG, a structure-based drug design with representationo alignment and physics guidance, by Zhongyu Liu.
+**Official implementation of DrugRPG, a structure-based drug design with representationo alignment and physics guidance, by Zhongyu Liu.<br>**
+
+![image](https://github.com/Hit-zhongyu/DrugRPG/blob/main/image/DrugRPG.png)
 
 # Dependencies
 ### **Conda environment**
 
 Please use our environment file to install the environment.
 ```
-# Clone the environment
-conda env create -f DrugRPG.yml
-# Activate the environment
+conda create -n DrugRPG python=3.9
 conda activate DrugRPG
+
+# Pytorch with conda
+conda install pytorch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 pytorch-cuda=12.4 -c pytorch -c nvidia
+# or use pip
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
+
+conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-forge
+
+# PyG (PyTorch Geometric)
+pip install torch_scatter torch_sparse torch_cluster --no-index -f https://data.pyg.org/whl/torch-2.4.0+cu124.html
+pip install torch_geometric
+
+# DGL
+pip install dgl -f https://data.dgl.ai/wheels/torch-2.2/cu121/repo.html
+pip install dgllife
+
+# For Vina Docking
+pip install meeko==0.1.dev3 scipy pdb2pqr vina==1.2.2 
+python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py3
 ``` 
   
 ### **Pre-trained models**
-The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17107488).
+The pre-trained models could be downloaded from [Zenodo](https://zenodo.org/records/17183753).
 
 # Benchmarks
 
-Download and extract the dataset is provided in [Zenodo](https://zenodo.org/records/17107488)
+Download and extract the dataset is provided in [Zenodo](https://zenodo.org/records/17183753)
 
 The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files/crossdock2020/
 
