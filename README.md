@@ -40,6 +40,13 @@ Download and extract the dataset is provided in [Zenodo](https://zenodo.org/reco
 
 The original CrossDocked dataset can be found at https://bits.csb.pitt.edu/files/crossdock2020/
 
+### **Data preparation**
+```
+mkidr data
+cd data
+wget -c 
+```
+
 # Training 
 ```
 TORCH_DISTRIBUTED_DEBUG=INFO OMP_NUM_THREADS=8 CUDA_VISIBLE_DEVICES=0  torchrun --rdzv_backend=static --rdzv_endpoint=localhost:0 --standalone --nproc_per_node=1 train.py
