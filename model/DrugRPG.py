@@ -244,14 +244,13 @@ class DrugRPG(nn.Module):
                 edge_type_prev = log_sample_categorical(log_edge_type)
                 edge_prev = self.edge_transition.onehot_encode(edge_type_prev)
 
-                # 测试3，7 效果最好
-                # with torch.enable_grad():
-                #     xt = ligand_pos_norm.requires_grad_(True) 
-                #     energy = compute_batch_clash_loss(
-                #          protein_pos_norm, xt, protein_batch, ligand_batch,
-                #          sigma=3, surface_ct=6)
-                #     energy_grad = torch.autograd.grad(energy, xt)[0]
-                #     pos_prev -= energy_grad
+                with torch.enable_grad():
+                    xt = ligand_pos_norm.requires_grad_(True) 
+                    energy = compute_batch_clash_loss(
+                        protein_pos_norm, xt, protein_batch, ligand_batch,
+                        sigma=3, surface_ct=6)
+                    energy_grad = torch.autograd.grad(energy, xt)[0]
+                    pos_prev -= energy_grad
                 
                 ligand_pos_norm = pos_prev
                 ligand_atom = atom_prev
